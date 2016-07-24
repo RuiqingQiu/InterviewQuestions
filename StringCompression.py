@@ -25,6 +25,7 @@ def StringCompression(string):
             char_count = 1
             cur_char = string[index]
         index = index + 1
+    
     if len(new_str) > old_len:
         return string
     else:
@@ -32,4 +33,8 @@ def StringCompression(string):
 
 print StringCompression("aabcccccaaa")
 print StringCompression("abcd")
+
+# NOT PASSED
+print StringCompression("aAaaAbcd") # result: aAaaAbcd
+print StringCompression("aAbCcccccCaaaA")# result: a2b1c7a4
 
